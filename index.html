@@ -2563,6 +2563,59 @@
        #progressBar {background:linear-gradient(90deg,#ff0099,#ffcf45,#00e5ff);box-shadow:0 0 12px rgba(255,0,153,.7)}
        .question {color:#fff;font-family:"Bebas Neue",Impact,sans-serif;font-size:clamp(32px,4.4vw,62px);letter-spacing:.03em;text-transform:uppercase;text-shadow:3px 3px 0 #ff0099,-1px -1px 0 #00e5ff}
        .instruction {color:#e7d7c0;font-family:"Orbitron",Arial,sans-serif;font-style:normal;font-size:11px;text-transform:uppercase}
+
+       /* =================================================
+          REPONSES TEXTE — STYLE 80s / VHS
+       ================================================= */
+       .text-answers {grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;max-width:1200px}
+
+       .text-answer {
+           min-height:105px;
+           padding:20px 24px;
+           border:3px solid #ffcf45;
+           border-radius:0;
+           background:linear-gradient(180deg,#18111e,#100b15);
+           color:#fff;
+           font-family:"Bebas Neue",Impact,sans-serif;
+           font-size:26px;
+           font-weight:400;
+           letter-spacing:.04em;
+           text-transform:uppercase;
+           text-shadow:2px 2px 0 #ff0099;
+           cursor:pointer;
+           box-shadow:6px 6px 0 rgba(255,0,153,.72),0 0 0 2px rgba(0,229,255,.22),0 0 20px rgba(0,0,0,.65);
+           transition:.2s;
+       }
+
+       .text-answer:hover {
+           transform:translateY(-5px);
+           border-color:#00e5ff;
+           background:linear-gradient(180deg,#22142a,#140c1b);
+           box-shadow:9px 9px 0 rgba(0,229,255,.8),0 0 25px rgba(255,0,153,.35);
+       }
+
+       .text-answer.selected {
+           border-color:#00e5ff;
+           background:#22142a;
+           box-shadow:6px 6px 0 #ff0099,0 0 22px rgba(0,229,255,.45);
+       }
+
+       .text-answer.correct {
+           border-color:#55ff9a;
+           background:#15271f;
+           color:#fff;
+           box-shadow:0 0 25px rgba(85,255,154,.4),6px 6px 0 #00e5ff;
+           text-shadow:2px 2px 0 #147a4a;
+       }
+
+       .text-answer.wrong {
+           border-color:#ff5d70;
+           background:#2c1118;
+           color:#fff;
+           box-shadow:6px 6px 0 #ff0099,0 0 22px rgba(255,93,112,.35);
+           text-shadow:2px 2px 0 #8d1f35;
+       }
+
        .image-answers {grid-template-columns:repeat(2,1fr);gap:24px;max-width:1200px}
        .image-answer {padding:8px;border:3px solid #ffcf45;background:#18111e;box-shadow:6px 6px 0 rgba(255,0,153,.72),0 0 0 2px rgba(0,229,255,.25),0 0 25px rgba(0,0,0,.7);border-radius:0;transition:.2s}
        .image-answer::before {inset:4px;border:1px solid rgba(0,229,255,.65)}
